@@ -23,8 +23,8 @@ def generate_animal_html(animal):
     <li class="cards__item">
         <div class="card__title">{name}</div>
         <p class="card__text">
-            Diet: {diet}<br>
-            Location: {location}<br>
+            <strong>Diet:</strong> {diet}<br>
+            <strong>Location:</strong> {location}<br>
             {type_html}
         </p>
     </li>
