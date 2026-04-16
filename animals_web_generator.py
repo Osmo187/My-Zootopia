@@ -14,7 +14,10 @@ def generate_animal_html(animal):
     name = animal.get("name", "Unknown")
     diet = characteristics.get("diet", "Unknown")
     location = animal.get("locations", ["Unknown"])[0]
-    animal_type = characteristics.get("type", "Unknown")
+    type_html = ""
+
+    if "type" in characteristics:
+        type_html = f"Type: {characteristics['type']}<br>"
 
     html = f"""
     <li class="cards__item">
@@ -22,7 +25,7 @@ def generate_animal_html(animal):
         <p class="card__text">
             Diet: {diet}<br>
             Location: {location}<br>
-            Type: {animal_type}
+            {type_html}
         </p>
     </li>
     """
